@@ -46,8 +46,8 @@ export default function Home() {
         News API News
       </Typography>
       <Grid container rowSpacing={5} columnSpacing={5} sx={{ marginY: 2 }}>
-        {newsData.map((news) => (
-          <Grid item xs={12} sm={6}>
+        {newsData.map((news, index) => (
+          <Grid item xs={12} sm={6} key={index}>
             <NewsCard
               title={news.title}
               date={news.date}
